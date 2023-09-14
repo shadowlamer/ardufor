@@ -1,0 +1,425 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <toolbox>toolbox_arduino_all</toolbox>
+  <block type="arduino_setup" id=";z9dW3%=e]UVvS,gE6*j" x="-644" y="74">
+    <statement name="MyLoop">
+      <block type="base_form_none3" id="OSj9It0hPA$NAk#^mira">
+        <statement name="DO">
+          <block type="procedures_callnoreturn" id="py+@E/^v_E8?dMW9I[F9">
+            <mutation name="Переключить свет"></mutation>
+            <next>
+              <block type="base_delay" id="xvs*uGh?cS4bzZ7gU?G+">
+                <field name="unite">s</field>
+                <value name="DELAY_TIME">
+                  <shadow type="math_number" id="mCvW_+^PGK5*?jew/Z6y">
+                    <field name="NUM">3</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="procedures_callnoreturn" id="5|QAYpi0D|bZ8=OTqLq1">
+                    <mutation name="Ждать нажатия кнопки"></mutation>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="%pl`a:TzuL.[Y#{T%t@I" x="-186" y="90">
+    <field name="NAME">Включить красный</field>
+    <statement name="STACK">
+      <block type="procedures_callnoreturn" id="],pvE(ZV.|s%,?gm$LGx">
+        <mutation name="Выключить все"></mutation>
+        <next>
+          <block type="inout_digital_write" id="@}wV}+(WEN%!u0tY#O4c">
+            <value name="PIN">
+              <shadow type="math_number" id="C/SGI:zQCipzVND3;)eN">
+                <field name="NUM">13</field>
+              </shadow>
+              <block type="logic_N_pin" id="q9zT;GmqrC7uLZhB#.lS">
+                <field name="SPEED1">5</field>
+              </block>
+            </value>
+            <value name="STAT">
+              <shadow type="math_number" id="ib0fU6U=TZ9pp?qGMWkS">
+                <field name="NUM">1</field>
+              </shadow>
+              <block type="logic_ONOFF" id="pr]9.T?Xd@v^4U#frf$/">
+                <field name="SPEED1">1</field>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set" id="t=`C7:eg`eD_1+m29q)h">
+                <field name="VAR">Цвет</field>
+                <value name="VALUE">
+                  <block type="text" id="K^u]_l!]d.[uiuoGqVjw">
+                    <field name="TEXT">красный</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="7W]YAC6kh@cz2wu)v|vx" x="-187" y="250">
+    <field name="NAME">Включить желтый</field>
+    <statement name="STACK">
+      <block type="procedures_callnoreturn" id="Gjea5$]8M]%Y:XwRu26v">
+        <mutation name="Выключить все"></mutation>
+        <next>
+          <block type="inout_digital_write" id="U]K:iK@VJ;6b_cfwm%6X">
+            <value name="PIN">
+              <shadow type="math_number" id="C/SGI:zQCipzVND3;)eN">
+                <field name="NUM">13</field>
+              </shadow>
+              <block type="logic_N_pin" id="kgzv=!b33|s+~!yfGkCU">
+                <field name="SPEED1">6</field>
+              </block>
+            </value>
+            <value name="STAT">
+              <shadow type="math_number" id="ib0fU6U=TZ9pp?qGMWkS">
+                <field name="NUM">1</field>
+              </shadow>
+              <block type="logic_ONOFF" id="+WdHoY_Y)^15Xokk5[TM">
+                <field name="SPEED1">1</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id=".O~{Ee{O=Ajg-yZ4B.77" x="-643" y="309">
+    <field name="NAME">Переключить свет</field>
+    <statement name="STACK">
+      <block type="controls_if" id="+C_oAa*G-dXg_fCw;eOW">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_compare_log" id="5qDN%Z1eA5#RNM:ZHmE6">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <shadow type="math_number" id="h7Sw)TelhouFutuP7Vq}">
+                <field name="NUM">R</field>
+              </shadow>
+              <block type="variables_get" id="5@)q-@)8mnmUI~IL;+WK">
+                <field name="VAR">Цвет</field>
+              </block>
+            </value>
+            <value name="B">
+              <shadow type="math_number" id="Fe))E|4Fb@J_xmep#NJX">
+                <field name="NUM">10</field>
+              </shadow>
+              <block type="text" id="muZHGErGM9u@6tLO%|L}">
+                <field name="TEXT">красный</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="base_define_for" id="U%~,A#T`~3X#e/ogP%QT">
+            <value name="variable">
+              <shadow type="math_number" id="V..9t4TIRQ$xz^mC~zQ2">
+                <field name="NUM">5</field>
+              </shadow>
+            </value>
+            <statement name="DO">
+              <block type="procedures_callnoreturn" id="6N7+Ew=/?4vKsM=r`8l_">
+                <mutation name="Включить красный"></mutation>
+                <next>
+                  <block type="base_delay" id="@%[/o=FWBa@-Y?o|u2Gq">
+                    <field name="unite">s</field>
+                    <value name="DELAY_TIME">
+                      <shadow type="math_number" id="K6vea1D$fbQD%D=wvF~C">
+                        <field name="NUM">0.2</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="procedures_callnoreturn" id="1ZCFzO~p[m;I!HX!r2;g">
+                        <mutation name="Выключить все"></mutation>
+                        <next>
+                          <block type="base_delay" id="{6aW2RmWNsBaS@bia#tt">
+                            <field name="unite">s</field>
+                            <value name="DELAY_TIME">
+                              <shadow type="math_number" id="kKBv73ya7bJ;%Q$=Js{G">
+                                <field name="NUM">0.2</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="base_define_for" id="a2hxzMVA_8+8FnO]ghx2">
+            <value name="variable">
+              <shadow type="math_number" id="@OVCJiFA1.Ut7Ke$TI;=">
+                <field name="NUM">5</field>
+              </shadow>
+            </value>
+            <statement name="DO">
+              <block type="procedures_callnoreturn" id="/4e1uhq_$g{UM+MgbK*n">
+                <mutation name="Включить зеленый"></mutation>
+                <next>
+                  <block type="base_delay" id="SCN(tfc/1}(*b?$Z5qAd">
+                    <field name="unite">s</field>
+                    <value name="DELAY_TIME">
+                      <shadow type="math_number" id="{dV^Eec9q;W)gX}k$#Np">
+                        <field name="NUM">0.2</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="procedures_callnoreturn" id="~}zua7-mWqleH;h5FoVJ">
+                        <mutation name="Выключить все"></mutation>
+                        <next>
+                          <block type="base_delay" id="%U]b+{OPz+fD*YD{Ff[y">
+                            <field name="unite">s</field>
+                            <value name="DELAY_TIME">
+                              <shadow type="math_number" id="kG!IU[3cOxmSjN)s9ZMU">
+                                <field name="NUM">0.2</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </statement>
+        <next>
+          <block type="procedures_callnoreturn" id="q1gp`OgyLFzxkBiOS=7{">
+            <mutation name="Включить желтый"></mutation>
+            <next>
+              <block type="base_delay" id="Ug95}(EFnEo?3N:^U$`C">
+                <field name="unite">s</field>
+                <value name="DELAY_TIME">
+                  <shadow type="math_number" id=")ZZI=A{uhFBm6RQa50=x">
+                    <field name="NUM">1.5</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="controls_if" id=";p3gCsk`~1OjEExl~X^h">
+                    <mutation else="1"></mutation>
+                    <value name="IF0">
+                      <block type="logic_compare_log" id="+iBSvU^ld`^+FxsSg6Rb">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <shadow type="math_number" id="h7Sw)TelhouFutuP7Vq}">
+                            <field name="NUM">R</field>
+                          </shadow>
+                          <block type="variables_get" id="-E/dz5/r3|Gs][y|Y3n6">
+                            <field name="VAR">Цвет</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <shadow type="math_number" id="Fe))E|4Fb@J_xmep#NJX">
+                            <field name="NUM">10</field>
+                          </shadow>
+                          <block type="text" id="W}zl-i(^QP|*k`bT-9%y">
+                            <field name="TEXT">красный</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="procedures_callnoreturn" id="ISUUHn[WPuNkq:dl^2Bu">
+                        <mutation name="Включить зеленый"></mutation>
+                      </block>
+                    </statement>
+                    <statement name="ELSE">
+                      <block type="procedures_callnoreturn" id="qFG}@=!X5TVQ(e~h}Pc1">
+                        <mutation name="Включить красный"></mutation>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="~1rH6*0`GJOi@WpyoETP" x="-185" y="383">
+    <field name="NAME">Включить зеленый</field>
+    <statement name="STACK">
+      <block type="procedures_callnoreturn" id="Qu;r3y_FHzS#sbu1/hEI">
+        <mutation name="Выключить все"></mutation>
+        <next>
+          <block type="inout_digital_write" id="#7pO5hM!=LXH3Q0jIXV8">
+            <value name="PIN">
+              <shadow type="math_number" id="C/SGI:zQCipzVND3;)eN">
+                <field name="NUM">13</field>
+              </shadow>
+              <block type="logic_N_pin" id="=9I~~uR;:W_z%9;0S#l,">
+                <field name="SPEED1">9</field>
+              </block>
+            </value>
+            <value name="STAT">
+              <shadow type="math_number" id="ib0fU6U=TZ9pp?qGMWkS">
+                <field name="NUM">1</field>
+              </shadow>
+              <block type="logic_ONOFF" id="JguC[I{{XGqS~5Vk),NU">
+                <field name="SPEED1">1</field>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set" id=";Y.`dv6G/8YK|5.oNkgB">
+                <field name="VAR">Цвет</field>
+                <value name="VALUE">
+                  <block type="text" id="U.%Ya$DH(EewMybOmgpd">
+                    <field name="TEXT">зеленый</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="wFPg^L,0g)y~0DHt5~p~" x="-185" y="545">
+    <field name="NAME">Выключить все</field>
+    <statement name="STACK">
+      <block type="inout_digital_write" id="(vKgvq3~dE]f5!-fEJ9H">
+        <value name="PIN">
+          <shadow type="math_number" id="C/SGI:zQCipzVND3;)eN">
+            <field name="NUM">13</field>
+          </shadow>
+          <block type="logic_N_pin" id="Ot8/2dgt=V;E8[9Y|Xp!">
+            <field name="SPEED1">5</field>
+          </block>
+        </value>
+        <value name="STAT">
+          <shadow type="math_number" id="ib0fU6U=TZ9pp?qGMWkS">
+            <field name="NUM">1</field>
+          </shadow>
+          <block type="logic_ONOFF" id="-fV4h;z^pj2|Dxs?EkW1">
+            <field name="SPEED1">0</field>
+          </block>
+        </value>
+        <next>
+          <block type="inout_digital_write" id="p:mI6vxArGM~y$kLhr=t">
+            <value name="PIN">
+              <shadow type="math_number" id=":x4rRKd;ak}L~%Q8nf;M">
+                <field name="NUM">13</field>
+              </shadow>
+              <block type="logic_N_pin" id="EnB83^DY3^v+%cUfy?z/">
+                <field name="SPEED1">6</field>
+              </block>
+            </value>
+            <value name="STAT">
+              <shadow type="math_number" id="Rg~+uBPgjBNg|3C;^?@I">
+                <field name="NUM">1</field>
+              </shadow>
+              <block type="logic_ONOFF" id="7sk#P:vSiF:Mk_s*sKfF">
+                <field name="SPEED1">0</field>
+              </block>
+            </value>
+            <next>
+              <block type="inout_digital_write" id="9A10$6i}3R]?41g`+8j^">
+                <value name="PIN">
+                  <shadow type="math_number" id="t}rug[%KnZV/~RmVP}85">
+                    <field name="NUM">13</field>
+                  </shadow>
+                  <block type="logic_N_pin" id="iycU-|yAvwSwNO/i;Eys">
+                    <field name="SPEED1">9</field>
+                  </block>
+                </value>
+                <value name="STAT">
+                  <shadow type="math_number" id=")X^[uo+H.-UCVgq+^]d:">
+                    <field name="NUM">1</field>
+                  </shadow>
+                  <block type="logic_ONOFF" id="*Z)D3+4qdD4b0^6d8X6?">
+                    <field name="SPEED1">0</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="procedures_defnoreturn" id="PUeLaH@`2to3I)OUzI:^" x="-184" y="726">
+    <field name="NAME">Ждать нажатия кнопки</field>
+    <statement name="STACK">
+      <block type="inout_digital_write" id="JQa7))4$=v+nbih!92wO">
+        <value name="PIN">
+          <shadow type="math_number" id="t}rug[%KnZV/~RmVP}85">
+            <field name="NUM">13</field>
+          </shadow>
+          <block type="logic_N_pin" id="F]+jy!.7k@!PAEpZ6#]P">
+            <field name="SPEED1">13</field>
+          </block>
+        </value>
+        <value name="STAT">
+          <shadow type="math_number" id=")X^[uo+H.-UCVgq+^]d:">
+            <field name="NUM">1</field>
+          </shadow>
+          <block type="logic_ONOFF" id="c6UlgM2B[}u-k@o1;Z^h">
+            <field name="SPEED1">1</field>
+          </block>
+        </value>
+        <next>
+          <block type="base_define_while" id="EFbyEF;,Mn9WB[N{5dJ.">
+            <field name="SPEED">==</field>
+            <value name="variable1">
+              <shadow type="math_number" id="+5T)2uzHWHABp3YGIb|7">
+                <field name="NUM">X</field>
+              </shadow>
+              <block type="digital_read" id="~_vgcM`log^u-zK{.9!D">
+                <value name="PIN">
+                  <shadow type="math_number" id="o9:2$.^B?k$2#olsw*`+">
+                    <field name="NUM">2</field>
+                  </shadow>
+                  <block type="logic_N_pin" id="i6hD@hfi7K-7!eEs3efJ">
+                    <field name="SPEED1">8</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <value name="variable2">
+              <shadow type="math_number" id="v6ZLj-T6[!#.Gg)F;c|D">
+                <field name="NUM">1</field>
+              </shadow>
+              <block type="logic_ONOFF" id="`p[{^/9Aj,H:_)!3zk@$">
+                <field name="SPEED1">0</field>
+              </block>
+            </value>
+            <next>
+              <block type="inout_digital_write" id="%Z[m!4gV7HAn^[5eAQM8">
+                <value name="PIN">
+                  <shadow type="math_number" id="t}rug[%KnZV/~RmVP}85">
+                    <field name="NUM">13</field>
+                  </shadow>
+                  <block type="logic_N_pin" id="on=k4qx5]nz0ryfh5A-y">
+                    <field name="SPEED1">13</field>
+                  </block>
+                </value>
+                <value name="STAT">
+                  <shadow type="math_number" id=")X^[uo+H.-UCVgq+^]d:">
+                    <field name="NUM">1</field>
+                  </shadow>
+                  <block type="logic_ONOFF" id="G5+Kzt1P.5y|5}OcaY@?">
+                    <field name="SPEED1">0</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>
