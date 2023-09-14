@@ -37,11 +37,11 @@ lights up, so the duration of one of the signals can be arbitrarily increased.
 | D9  | Discrete out | Green light    |
 
 
-## Программа
+## Program
 
 <img src="./images/prog.png"/>
 
-## Установка прогаммы и внесение изменений
+## Installing the program and making changes
 
 The project contains [Arduino sketch](./src/svetofor/svetofor.ino) which can be loaded into board
 with [Arduino IDE](https://www.arduino.cc/en/software).
@@ -49,7 +49,7 @@ The sketch was generated using the [ArduBlock platform](http://ardublock.ru/en/)
 The project also contains [ArduBlock project file](./src/svetofor.ardublock).
 Changes can be made either directly to the sketch or to the ArduBlock project.
 
-## Ссылки
+## Links
 
 [«Znatok» construction set](https://znatok.ru/)
 
