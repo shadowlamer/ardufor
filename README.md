@@ -3,6 +3,8 @@
 This is a study project on “how a traffic light works” for a kindergarten 
 in the competition “First steps in science.”
 
+<img src="./images/ardufor.jpg"/>
+
 The project is a simple Arduino-controlled traffic light. The main goal of the project 
 is to study how the traffic light works and to demonstrate how Arduino can be used to 
 control traffic lights, as well as to provide a basic model that can be modified and 
