@@ -46,7 +46,7 @@
 ## Установка прогаммы и внесение изменений
 
 Проект содержит [скетч Arduino](./src/svetofor/svetofor.ino) который может быть загружен в плату 
-при помощи [Arduino IDE](https://www.arduino.cc/en/software). 
+при помощи [Arduino IDE](https://arduino.ru/Arduino_environment). 
 Скетч сгенерирован при помощи платформы [ArduBlock](http://ardublock.ru/ru/). 
 Проект так же содержит [файл проекта ArduBlock](./src/svetofor.ardublock). 
 Изменения можно вносить как непосредственно в скетч, так и в проект ArduBlock.
@@ -57,6 +57,6 @@
 
 [ArduBlock 2.0, Программа блочного кодирования для платформ Arduino Uno, Nano, Mega, Mini](http://ardublock.ru/ru/)
 
-[Arduino, электронный конструктор](https://www.arduino.cc/)
+[Arduino, электронный конструктор](https://arduino.ru/About)
 
 [Реальная наука #14. Как устроен светофор? (видео)](https://youtu.be/77OhiLxO4Ck?feature=shared)
